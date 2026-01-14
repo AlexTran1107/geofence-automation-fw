@@ -217,20 +217,9 @@ pipeline {
             }
         }
         
-        stage('Update Confluence') {
-            steps {
-                script {
-                    echo "📝 Updating Confluence with test execution summary"
-                    try {
-                        // This is handled by TestListener.onFinish() in the framework
-                        // which automatically updates Confluence after test execution
-                        echo "Confluence update will be handled by TestListener"
-                    } catch (Exception e) {
-                        echo "⚠️ Error updating Confluence: ${e.getMessage()}"
-                    }
-                }
-            }
-        }
+        // Note: Confluence integration is not currently implemented in the framework.
+        // This stage is reserved for future Confluence integration if needed.
+        // Currently, test results are available via Allure reports and Jira defects.
     }
     
     post {

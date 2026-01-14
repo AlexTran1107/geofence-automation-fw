@@ -25,7 +25,7 @@ import java.util.List;
  * - Reusable element interaction methods (click, sendKeys, findElement, etc.)
  * - Implicit wait configuration from application.properties
  * 
- * @author Automation Team
+ * @author Ngan Tran
  * @version 1.0
  */
 public abstract class BasePage {

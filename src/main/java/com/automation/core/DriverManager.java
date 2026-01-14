@@ -23,7 +23,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * - Driver lifecycle management (start, quit, cleanup)
  * - Wait object management
  * 
- * @author Automation Team
+ * @author Ngan Tran
  * @version 1.0
  */
 public class DriverManager {

@@ -89,17 +89,17 @@ This framework provides a scalable foundation for mobile automation with:
                │
 ┌──────────────▼──────────────────────┐
 │      Service Layer                  │
-│  (AtlassianService, LocationSim)    │
+│  (AtlassianService, LocationSimulator) │
 └──────────────┬──────────────────────┘
                │
 ┌──────────────▼──────────────────────┐
 │      Core Layer                     │
-│  (DriverManager, ConfigManager)    │
+│  (DriverManager, ConfigManager)     │
 └──────────────┬──────────────────────┘
                │
 ┌──────────────▼──────────────────────┐
 │      Utility Layer                  │
-│  (ScreenshotUtil, LoggerUtil)      │
+│  (ScreenshotUtil, LoggerUtil)       │
 └─────────────────────────────────────┘
 ```
 
@@ -220,28 +220,28 @@ mvn allure:serve
 ### Scenario 1: Geofence Zone Creation and Activation
 
 **Given** the user is on the EgiGeoZone main screen  
-**When** the user creates a new geofence zone
-- And the zone center is set to the current device location
-- And the zone radius is set to "100" meters
-- And the zone trigger includes "Exit"
-- And notifications are enabled for the zone
+**When** the user creates a new geofence zone  
+- And the zone center is set to the current device location  
+- And the zone radius is set to "50" meters  
+- And the zone trigger includes "Exit"  
+- And notifications are enabled for the zone  
 - And the user saves the zone  
-**Then** the geofence zone should be created successfully
-- And the zone should be registered with the system geofencing service
-- And the zone should be displayed in the zone list
+**Then** the geofence zone should be created successfully  
+- And the zone should be registered with the system geofencing service  
+- And the zone should be displayed in the zone list  
 - And the zone status should indicate "Active"
 
 **Test Class**: `GeofenceLocationSetupTest.testGeofenceLocationSetup()`
 
 ### Scenario 2: Exit Geofence Detection
 
-**Given** a geofence zone is created with radius "100" meters at the current device location
-- And notifications for this zone are enabled
+**Given** a geofence zone is created with radius "50" meters at the current device location  
+- And notifications for this zone are enabled  
 - And the device location is set inside the zone  
-**When** the device moves outside the geofence area  
-**Then** the system should detect an exit event from the zone
-- And EgiGeoZone should show a notification for the exit event
-- And the notification message should contain the exit event keyword
+**When** the device moves outside the geofence area by approximately "150" meters  
+**Then** the system should detect an exit event from the zone  
+- And EgiGeoZone should show a notification for the exit event  
+- And the notification message should contain the exit event keyword  
 
 **Test Class**: `ExitGeofenceTest.testExitGeofence150m()`
 
@@ -494,7 +494,7 @@ This is a POC framework for demonstration purposes.
 
 ## 👥 Contributors
 
-Automation Team
+Ngan Tran
 
 ## 📞 Support
 

@@ -10,10 +10,10 @@ import org.testng.annotations.Test;
 
 /**
  * TC2 - Exit Geofence Detection Test
- * 
+ *
  * Scenario: EgiGeoZone triggers notification when device exits a configured zone
- * 
- * Given a geofence zone is created with radius "100" meters at the current device location
+ *
+ * Given a geofence zone is created with radius "50" meters at the current device location
  *   And notifications for this zone are enabled
  *   And the device location is set inside the zone
  * When the device moves outside the geofence area
@@ -21,7 +21,7 @@ import org.testng.annotations.Test;
  *   And EgiGeoZone should show a notification for the exit event
  *   And the notification message should contain the exit event keyword
  * 
- * @author Automation Team
+ * @author Ngan Tran
  * @version 1.0
  */
 @Epic("Geofence Functionality")
@@ -32,7 +32,7 @@ public class ExitGeofenceTest extends BaseTest {
     @Test(description = "TC2: Verify exit geofence detection triggers notification in EgiGeoZone")
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test to verify that EgiGeoZone triggers notification when device exits " +
-                 "a 100m radius geofence zone")
+                 "a 50m radius geofence zone")
     @Story("EgiGeoZone detects exit event and shows notification")
     public void testExitGeofence150m() {
         logger.info("Starting TC2: Exit Geofence Detection Test");
@@ -75,10 +75,10 @@ public class ExitGeofenceTest extends BaseTest {
         });
 
         // Then: Refresh the page
-        // Allure.step("Refresh the page", () -> {
-        //     mainScreen.refreshPage();
-        //     logger.info("Page refreshed");
-        // });
+        Allure.step("Refresh the page", () -> {
+            mainScreen.refreshPage();
+            logger.info("Page refreshed");
+        });
 
         // Then: Validate system detects exit event from the zone
         Allure.step("Validate system detects exit event from the zone", () -> {

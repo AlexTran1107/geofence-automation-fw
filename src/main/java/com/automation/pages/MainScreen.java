@@ -20,7 +20,7 @@ import java.util.List;
  * This class handles all interactions with the EgiGeoZone application UI,
  * including geofence creation, zone management, and notification handling.
  * 
- * @author Automation Team
+ * @author Ngan Tran
  * @version 1.0
  */
 public class MainScreen extends BasePage {

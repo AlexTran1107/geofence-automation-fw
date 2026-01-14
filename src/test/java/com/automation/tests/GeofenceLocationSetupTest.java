@@ -26,7 +26,7 @@ public class GeofenceLocationSetupTest extends BaseTest {
 
     @Test(description = "TC1: Verify geofence zone creation and activation in EgiGeoZone")
     @Severity(SeverityLevel.CRITICAL)
-    @Description("Test to verify that a geofence zone can be created with 100m radius, Exit trigger, " +
+    @Description("Test to verify that a geofence zone can be created with 50m radius, Exit trigger, " +
                  "notifications enabled, and becomes active in EgiGeoZone")
     @Story("User creates and activates geofence zone with Exit trigger")
     public void testGeofenceLocationSetup() {
