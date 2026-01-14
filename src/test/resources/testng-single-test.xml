@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Single Test Suite" parallel="false" verbose="2">
+    <listeners>
+        <listener class-name="com.automation.listeners.TestListener"/>
+        <listener class-name="com.automation.listeners.AllureListener"/>
+    </listeners>
+
+    <test name="Single Test Execution">
+        <classes>
+            <class name="com.automation.tests.ExitGeofenceTest">
+                <methods>
+                    <include name="testExitGeofence150m"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+

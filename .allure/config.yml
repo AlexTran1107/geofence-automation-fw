@@ -1,0 +1,20 @@
+# Allure configuration file
+plugins:
+  - junit-xml-plugin
+  - xunit-xml-plugin
+  - trx-plugin
+  - behaviors-plugin
+  - packages-plugin
+  - screen-diff-plugin
+  - xctest-plugin
+  - jira-plugin
+  - xray-plugin
+  - custom-logo-plugin
+
+report:
+  language: en
+  logo: custom
+
+
+
+
